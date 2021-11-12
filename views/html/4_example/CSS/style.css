@@ -1,0 +1,48 @@
+H3 {
+ color: navy;
+ background-color:red;
+ font-size: 200%;
+ font-family: Arial, Verdana, sans-serif;
+ text-align: center;
+}
+
+#newID{
+	color: white;
+ 	background-color:gray;
+}
+
+.newClass{
+	font-size:200%;
+}
+
+#ID2 .Class2 i{
+	color:pink;
+	font-size: 200%;
+	
+}
+
+a:active {
+	background-color: #FFFF00;
+	}
+a:hover {
+	color: orange;
+	font-style: italic;
+	}
+
+
+/* P {
+ padding-left: 20px;
+}
+
+label {
+	marging-top: 10px;
+	display: block;
+} */
+
+.container {
+border: 3px solid black;
+background: red;
+height:100px;
+max-width: 800px;
+min-width: 500px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World!</h1>
+
+<button onclick="setBackgroundRed()">Set background RED</button>
+<button onclick="setBackgroundReset()">Set background RESET</button>
+<button onclick="getCurrentUrl()">Get current URL</button>
+
+<script>
+function setBackgroundRed() {
+  document.body.style.background = 'red';
+}
+
+function setBackgroundReset() {
+ 
+document.body.style.background = '';
+}
+
+function getCurrentUrl() {
+ 
+alert( location.href );
+}
+
+</script>
+
+</body>
+</html>

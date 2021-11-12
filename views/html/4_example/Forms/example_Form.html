@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>HTML Document</title>
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+    <script>
+function send(form) {
+    var result = "";
+    for (var i =0; i<form.elements.length; i++) {
+         result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + " > " + form.elements[i].checked + "</p>"; 
+    }
+    document.getElementById('result').innerHTML = result;
+    return false;
+}
+</script>
+
+    <h2>Виды веб-форм</h2>
+
+   
+    <form onsubmit="send(this);return false;" action="example_Form.html"  method="GET" novalidate>
+
+    <!-- accept-charset="utf-8" enctype="text/liain" method="GET" novalidate autocomplete="on" -->
+        <!-- enctype -->
+<!-- application/x-www-form-urlencodedВместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).multipart/form-dataДанные не кодируются. Это значение применяется при отправке файлов.text/plainПробелы заменяются знаком +, буквы и другие символы не кодируются. --> 
+        <p class="one">Поле для ввода адреса электронной почты: </p>
+        <input  type="email" autofocus placeholder="me@example.com" name="email">
+        <!--<input autocomplete="on" type="email" autofocus placeholder="me@example.com" name="email" required> -->
+        <br><br>
+        <p class="one">Поле для ввода URL-адреса: </p>
+        <input type="url" placeholder="http://example.com" name="url" >
+        <br><br>
+        <p class="one">Ползунок: </p>
+        <input type="range" name="range" min="4" max="100" step="2" value="80">
+        <br><br>
+        <p class="one">Поле для ввода числовых данных, часто в виде элемента-счетчика: </p>
+        <input type="number" min="2" max="10" name="number">
+        <br><br>
+        <p class="one">Поле для ввода числовых данных, часто в виде элемента-счетчика: </p>
+        <input type="color" name="color">
+        <br><br>
+        <p class="one">Поле для ввода даты. Поддерживаются типы date, month и week: </p>
+        <input id="date" type="date" name="date">
+        <br><br>
+        <p class="one">Поле для ввода даты со временем: </p>
+        <!-- <input id="datetime" type="datetime"> - Устарело !!!  -->
+       <input id="datetime-local" type="datetime-local" name="datetime-local">
+       <input id="time" type="time" name="time">
+        <br><br>
+        <p class="one">Поле для ввода ключевых слов поиска: </p>
+        <input type="search" name="search">
+        <br><br>
+        <p class="one">Поле для ввода текста: </p>
+        <input type="text" name="text" required>
+        <br><br>
+        <p class="one">Кнопка для отправки файлов: </p>
+        <input type="file" name="file" id="file"/>
+        <br><br>
+        <p class="one">Пример checkbox: </p>
+        <input type="checkbox" name="option1" value="value1" id="id1" checked>Windows 95/98 </>
+        <input type="checkbox" name="option2" value="value2" id="id2" >Windows 95/98 </>
+        <br><br>
+        <p class="one">Пример checkbox и label </p>
+        <label><input type="checkbox" name="option3" value="value3" id="id3" checked </> Нужно нажать тут </label>
+        <input type="checkbox" name="option4" value="value4" checked id="id4"></><label for="option4">Или тут... </label>
+        <br><br>
+        <fieldset title="текст">
+            <label for="first_name1">Ваше имя: </label>
+            <input type="text" id="first_name1" name="first_name1" placeholder="Ваше имя" > 
+            Password: <input type="password" name="password" placeholder="Пароль">
+        </fieldset>
+        <br><br>
+        <p class="one">Переключатели (radiobutton) и label </p>
+        Ваш пол : <label><input type="radio" value="male" name="sex" >Мужской |</label> <label><input type="radio" value="female" name="sex" checked>Женский </label><!-- не работает как надо !!! надо добавить name -->
+        <br><br>
+        <textarea name="comments">          
+        </textarea>
+        <br><br>
+        <p class="one">Поле с изображением: </p>
+        <input id="image" type="image" alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+        <br><br>
+        <p class="one">Скрытое поле: </p>
+        <input id="prodId" name="prodId" type="hidden" value="xm234jq">
+        <br><br>
+        <p class="one">Поле для телефонных номеров: </p>
+        <input id="telNo" type="tel">
+        <br><br>
+        <p class="one">Поле для выбора месяца: </p>
+        <input id="month" type="month">
+        <br><br>
+        <p class="one">Поле для выбора дня недели: </p>
+        <input id="week" type="week">
+        <br><br>
+        <p>Список вариантов:</p>
+          <p><input list="character">
+           <datalist id="character">
+            <option value="Чебурашка" id="list1"></option>
+            <option value="Крокодил Гена" id="list2"></option>
+            <option value="Шапокляк" id="list3"></option>
+           </datalist></p>
+           <br>
+           <input type="text" list="mydata" > <br><br>
+        <datalist id="mydata">
+            <option label="грн" value="гривны" id="currency1">
+            <option label="$" value="доллар" id="currency2">
+        </datalist>
+        <br><br>
+        <button type="reset" name="reset">Reset</button>
+        <input type="submit" name="submit" value="Кнопка">     
+        </form>
+    
+    <div id="result"></div>
+
+<!-- rows cols -->
+<!-- <input type="button">
+<input type="reset">
+-->
+
+   </body>
+</html>

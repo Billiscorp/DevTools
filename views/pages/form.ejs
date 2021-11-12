@@ -1,0 +1,116 @@
+<form onsubmit="send(this);return false;" >
+  	<!-- accept-charset="utf-8" enctype="text/liain" method="GET" novalidate autocomplete="on" -->
+    	<!-- enctype -->
+<!-- application/x-www-form-urlencodedВместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).multipart/form-dataДанные не кодируются. Это значение применяется при отправке файлов.text/plainПробелы заменяются знаком +, буквы и другие символы не кодируются. -->
+
+
+
+    	<!-- <form name="MyForm" > -->
+	    <!-- <input type="text" name="first_name" value="что нибудь" > autofocus - Поддержка передачи фокуса конкретному элементу формы. -->
+	   <!--  ОЧИСТКА ПОЛЯ !!! -->
+	   <br>
+
+    	<input type="text" name="first_name1" placeholder="Ваше имя" required> 
+
+    	<!-- id
+    	label -->
+				<br>
+				<fieldset>
+				<label for="first_name1">Ваше имя: </label>
+    	    	<input type="text" id="first_name1" name="first_name1" placeholder="Ваше имя" > 
+    	
+
+
+    	<br>
+    	<br>
+				Password: <input type="password" name="password">
+				</fieldset>
+    	<br>
+    	<br>
+    			Ваш пол : <input type="radio" value="male" name="sex" checked>Мужской | <input type="radio" value="female" name="sex">Женский <!-- не работает как надо !!! надо добавить name -->
+
+    	<br>
+    	<br>
+				<textarea name="comments">
+					
+				</textarea>
+				 <!-- rows cols -->
+    	<br>
+    	<br>
+
+    			<input type="checkbox" value="1">Запомнить
+    	<br>
+    	<br>
+    	<input type="submit" name="submit" value="Кнопка">
+		<br>
+    	<br>
+    	<input type="text" list="mydata" > <br><br>
+    	<datalist id="mydata">
+    		<option label="грн" value="гривны">
+    		<option label="$" value="доллар">
+    	
+    	</datalist>
+
+    	<input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+
+    	<br>
+
+    	<button type="reset" name="reset">Какая то кнопка</button>
+
+    	<div>
+
+    	<input type="range" name="range" min="1" max="100" step="1" value="50">
+
+    	</div>
+
+    	<div>
+    		<input type="color" name="color">
+    	</div>
+
+    	<!-- <div>
+    		<input type="email" name="">
+    	</div>
+    	
+    	<div>
+    		<input type="search">
+    	</div> -->
+
+    	<div>
+    		<input type="url">
+    	</div>
+<div>
+    	<input type="file" name="file" id="file"/>
+    	</div>
+
+    	<div>
+    		<input type="number" min="2" max="10"> 
+    	</div>
+
+
+
+    	<!-- <input type="url">-Поле для ввода URL-адреса.
+    			<input type=‘range"> name min max step value
+    			<input type="number">- Поле для ввода числовых данных, часто в виде элемента-счетчика. min max
+    			<input type="color">- Поле для выбора цвета.
+    			<input type="date">- Поле для ввода даты. Поддерживаются типы date, month и week.
+    			<input type="datetime">- Поле для ввода даты со временем. Поддерживаются типы datetime, datetime-local и time.
+    			<input type="search">- Поле для ввода ключевых слов поиска.
+    			<input type="email" placeholder="me@example.com">- Поддержка автоматического включения текста в поле формы.
+    			<input type="email" required>-Блокировка отправки страницы, если поле осталось незаполненным.
+    			<input pattern="/A(\s*|\d+)$/">- Блокировка отправки страницы, если содержимое поля не соответствует заданному образцу.
+    			 <р contenteditable>lorem ipsumc/p> - Поддержка редактирования контента «на месте» в браузере. -->
+</form>
+
+<script>
+function send(form) {
+    var result = "";
+	for (var i =0; i<form.elements.length; i++) {
+	     result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + "</p>";	
+	}
+	document.getElementById('result').innerHTML = result;
+    return false;
+}
+
+
+</script>
+<div id="result"></div>

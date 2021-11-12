@@ -1,0 +1,23 @@
+<form onsubmit="send(this);return false;" >
+  <input type="text" name="fromForm1">
+  <input type="submit">
+</form>
+
+<form onsubmit="send(this);return false;" >
+  <input type="text" name="fromForm2">
+  <input type="submit">
+</form>
+
+<script>
+function send(form) {
+    var result = "";
+	for (var i =0; i<form.elements.length; i++) {
+	     result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + "</p>";	
+	}
+	document.getElementById('result').innerHTML = result;
+    return false;
+}
+
+
+</script>
+<div id="result"></div>
