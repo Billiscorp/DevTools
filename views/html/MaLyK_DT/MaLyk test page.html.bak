@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+		<title>MaLyK Test Page</title>
+		<link rel="shortcut icon" href="icon.png" type="image/png">
+</head>
+<!-- Заголовок для теста -->
+<body>
+	<h1> Welcome to the Malyk's Test Page </h1>
+	<p><big>
+		Вставка простого изображения:
+	</big></p>
+	<p><img src="welcome.jpg" width="174" height="290"></p>
+	<form>
+	<center><font size=4>Различные элементы страницы</font></center>
+	<hr color="blue">
+	<h2>Элементы INPUT</h2>
+	<h4> Ввод текстовой строки </h4>
+		<input type="text" size=50>
+		<hr color="green">
+	<h3> Ввод пароля </h3>
+		<input type="password">
+		<hr color="green">
+	<h3> Флажки </h3>
+		<p> First </p>
+		<input type="checkbox" name="First type" checked>
+		<p> Second </p>
+		<input type="checkbox" name="Second type" checked>
+		<hr color="green">
+	<h3> Переключатели </h3>
+		<p> First </p>
+		<input type="radio" name="S001" vаluе="Первый">
+		<p> Second </p>
+		<input type="radio" name="S001" value="Второй">
+		<p> Third </p>
+		<input type="radio" name="S001" value="Третий" checked>
+		<hr color="green">
+	<h3> Кнопка подтверждения ввода </h3>
+		<input type="submit" value="Подтверждение">
+		<hr color="green">
+	<h3> Кнопка с изображением </h3>
+		<input type="image" src="button.png">
+		<hr color="green">
+	<h3> Кнопка очистки формы </h3>
+		<input type="reset" value="Очистка">
+		<hr color="green">
+	<h3> Выбрать Файл </h3>
+		<input type="file" name="photo" accept="image/*">
+		<hr color="green">
+		
+	<hr color="blue">
+	<h2>Элемент SELECT</h2>
+		<select multiple>
+			<option value=а>Первый
+			<option value=Ь>Второй
+			<option value=с>Третий
+			<option value=d>Четвертый
+		</select>
+	<hr color="blue">
+	<h2>Элемент TEXTAREA</h2>
+		<textarea rows=7 cols=20>
+			Область для ввода текста
+		</textarea>
+	<hr color="blue">
+	</form>
+		<h2> Таблица </h2>
+		<table>
+			<tbody>
+				<tr>
+				  <td>User 1</td>
+				  <td>User 2</td>
+				  <td>User 3</td>
+				</tr>
+				<tr>
+				  <td> _ </td>
+				  <td> _ </td>
+				  <td> _ </td>
+				</tr>
+				<tr>
+				  <td>User 4</td>
+				  <td>User 5</td>
+				  <td>User 6</td>
+				</tr>
+				<tr>
+				  <td> _ </td>
+				  <td> _ </td>
+				  <td> _ </td>
+				</tr>
+				<tr>
+				  <td>User 7</td>
+				  <td>User 8</td>
+				  <td>User 9</td>
+				</tr>
+			 <tr>
+				  <td> _ </td>
+				  <td> _ </td>
+				  <td> _ </td>
+				</tr>
+				<tr>
+				  <td> _ </td>
+				  <td> _ </td>
+				  <td> _ </td>
+				</tr>
+				<tr>
+				  <td> _ </td>
+				  <td> _ </td>
+				  <td> _ </td>
+				</tr>
+			</tbody>
+		</table>
