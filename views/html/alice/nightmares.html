@@ -3,6 +3,92 @@
 <head>
 <title>Little Nightmares</title>
 <style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
 h1 {text-align: center;}
 figcaption {
   background-color: black;
@@ -11,16 +97,36 @@ figcaption {
   padding: 2px;
   text-align: center;
 }
+.font {
+  font-size: 40px;
+  font-family: algerian;
+}
+.font1 {
+  color: #040404;
+font-size: 50px;
+font-family:algerian
+} 
+.header
+{
+font-size: 70px;
+font-family:algerian
+}
+.text
+{font-size:20px;}
+a {font-size:20px;
+font-family:algerian}
 </style>
-<link rel="stylesheet" type="text/css" href="https://github.com/Billiscorp/DevTools/blob/alice/views/html/alice/css/color.css">
 </head>
 <body>
 <h1 class="header">
 Little Nightmares
 </h1>
-<br>
-<br>
 <center><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/424840/header.jpg?t=1630581910"></center>
+<br>
+<br>
+<center>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VCn430sHLxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 <p style="font-size:20px;">Immerse yourself in <span style="color: #DC143C">Little Nightmares</span>, a dark whimsical tale that will confront you with your childhood fears! Help Six escape The Maw – a vast, mysterious vessel inhabited by corrupted souls looking for their next meal. As you progress on your journey, explore the most disturbing dollhouse offering a prison to escape from and a playground full of secrets to discover. Reconnect with your inner child to unleash your imagination and find the way out!</p>
 <hr>
 <center><p class="font1" >
@@ -28,10 +134,10 @@ Location:<br>
 <span style="font-size:30px; color: #DC143C">The Maw</span>
 </p>
 </center>
-<p style= "font-size:18px;">
-<span style="color: #DC143C; font-size:18px;">The Maw</span> is the main location in Little Nightmares where all gameplay takes place. It is described as a kind of underwater resort that caters to the extremely wealthy and powerful elite. It is never explained how or when the Maw was built or who built it.
+<p class="text">
+<span style="color: #DC143C; font-size:20px;">The Maw</span> is the main location in Little Nightmares where all gameplay takes place. It is described as a kind of underwater resort that caters to the extremely wealthy and powerful elite. It is never explained how or when the Maw was built or who built it.
 </p>
-<center><img src="https://wallpaperboat.com/wp-content/uploads/2021/03/16/71181/little-nightmares-21.jpg" width="1200" height="900"></center>
+<center><img src="https://wallpaperboat.com/wp-content/uploads/2021/03/16/71181/little-nightmares-21.jpg" width="900"></center>
 <center><img src="https://c4.wallpaperflare.com/wallpaper/577/998/535/the-maw-8k-little-nightmares-boarding-wallpaper-preview.jpg"></center>
 <hr>
 <center><p class="font">
@@ -47,13 +153,13 @@ Main Characters:
 </h1>
 </center>
 <hr>
-<p style="font-size:18px; color:#040404; font-weight:regular;">
+<p class="text">
   <span style="color: #DC143C">Six</span>
   is a smart and hardy girl of about nine, whose main motif is a yellow raincoat. Throughout the entire universe of the franchise, Six is trying to survive in a world filled with cruel monsters, seeking to destroy her by any means.
 </p>
 <center><img src="https://gamesmobilepc.com/wp-content/uploads/2019/11/little-nightmares-six.jpg"> <figcaption>Six running from The Janitor</figcaption></center>
 <hr>
-<p style="font-size:18px; color:#040404; font-weight:regular;">
+<p class="text">
   <span style="color: #DC143C">The Janitor</span>
   also known as <span style="color: #DC143C">Roger</span>, is the first antagonist of the Maw that Six encounters, and one of many individuals that oppose her on her journey in Little Nightmares. He's also the second antagonist encountered in Secrets of the Maw.
 </p>
@@ -61,7 +167,7 @@ Main Characters:
 <br>
 <center><img src="https://c.tenor.com/JL8LDtr9oJ8AAAAd/little-nightmares.gif" /> <figcaption>The Janitor gets alerted</figcaption></center>
 <hr>
-<p style="font-size:18px; color:#040404; font-weight:regular;">
+<p class="text">
   The <span style="color: #DC143C">Twin Chefs</span>
   are the second antagonists encountered in Six's journey to escape the Maw in Little Nightmares. They are the main antagonists of The Kitchen chapter and one of them is briefly encountered in The Guest Area chapter.
 </p>
@@ -69,7 +175,7 @@ Main Characters:
 <br>
 <center><img src="https://64.media.tumblr.com/87aa42af6b539e6b302a85cc850ffffc/c6796c7c0f3732f0-02/s540x810/12bd375b65c88a1a5e94d453272c35b38ac662bf.gifv" /><figcaption>Six escapes one of the Chefs</figcaption></center>
 <hr>
-<p style="font-size:18px; color:#040404; font-weight:regular;">
+<p class="text">
  <span style="color: #DC143C">Guests</span>
   are the second minor enemies seen in Little Nightmares, encountered in The Guest Area chapter. They are the main antagonistic faction of said chapter.
 </p>
@@ -82,7 +188,7 @@ Main Characters:
 <br>
 <center><img src="https://media4.giphy.com/media/laYV3hBzVGUgTgfvsl/giphy.gif?cid=790b761170d58b76e6119eed07485a0a9660237cda9b6f27&rid=giphy.gif&ct=g" /><figcaption>Also, Guests being desperate</figcaption></center>
 <hr>
-<p style="font-size:18px; color:#040404; font-weight:regular;">
+<p class="text">
  <span style="color: #DC143C">The Lady</span>
   serves as the final and main antagonist of Little Nightmares and Secrets of the Maw. She was the proprietress of the Maw and was said to cast the spell that keeps it running. She is the main antagonist of The Lady's Quarters chapter and The Residence chapter.
 </p>
@@ -95,26 +201,23 @@ Main Characters:
 More photos from the game:
 </p>
 </center>
-<center><p>
-    <img src="https://images6.alphacoders.com/829/829098.jpg" width="980" 
-     height="500" alt="Kitchen"> 
-     <br>
-  <img src="https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2020/05/littlenightmares.jpg?fit=830%2C535&ssl=1" alt="Kitch">
-  <br>
-    <img src="https://www.japanbullet.com/images/2017/05/558969023590659fa531be0.46009282.jpg" width="980" 
-     height="500" alt="Guests">
-     <br>
-    <img src="https://guides.gamepressure.com/little_nightmares/gfx/word/28560640.jpg" alt="Roger">
-    <br>
-    <img src="https://sm.ign.com/t/ign_ap/review/l/little-nig/little-nightmares-review_h7w4.1280.jpg" alt="Janitor">
-    <br>
-    <img src="https://image.api.playstation.com/cdn/UP0700/CUSA05929_00/KqKdn8KzHmpzmnDJ7IPNdtS0ni7rss3B.png" alt="Complete">
-  </p>
+<center>
+  <img class="myImages" id="myImg" src="https://image.api.playstation.com/cdn/UP0700/CUSA05929_00/KqKdn8KzHmpzmnDJ7IPNdtS0ni7rss3B.png" alt="Ugly mugs" width="300" height="200">
+<img class="myImages" id="myImg" src="https://images6.alphacoders.com/829/829098.jpg" alt="Kitchen" width="300" height="200">
+<img class="myImages" id="myImg" src="https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2020/05/littlenightmares.jpg?fit=830%2C535&ssl=1" alt="Kitchen (again)"
+width="300" height="200">
+<img class="myImages" id="myImg" src="https://www.japanbullet.com/images/2017/05/558969023590659fa531be0.46009282.jpg" alt="Guests" width="300" height="200">
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
   </center>
   <hr>
-<h1 class="font">
+<center><p class="font">
 Some links from "Little Nightmares Wiki"
-</h1>
+</p>
+</center>
 <center><p>
 <a target=new href="https://littlenightmares.fandom.com/wiki/Little_Nightmares_(video_game)">Little Nightmares (an overall article)</a>
 <br>
@@ -152,5 +255,31 @@ Soundtracks from the game
 <br>
 <p style="font-size:25px; color:#040404; font-weight:bold; font-family:algerian;">By Alice Lilly
 </p>
+<script>
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 </body>
 </html>
